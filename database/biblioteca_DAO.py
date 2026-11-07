@@ -11,3 +11,23 @@ class BibliotecaDAO:
         pass
 
     # TODO
+    def get_biblioteche(self):
+        db = DBConnect()
+        cnx = db.get_connection()
+        result = []
+        if cnx is not None:
+            cursor = cnx.cursor()
+            # 1. Chiediamo tutte le colonne, non solo il nome
+            cursor.execute("SELECT * FROM biblioteca")
+
+            for row in cursor:
+                # 2. Spacchettiamo la tupla e istanziamo l'oggetto DTO
+                bibl = Biblioteca(*row)
+                result.append(bibl)
+
+            cursor.close()
+            cnx.close()
+            return result
+        else:
+            print("Could not connect")
+            return None

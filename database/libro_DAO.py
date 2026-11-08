@@ -11,7 +11,7 @@ class LibroDAO:
         pass
 
     # TODO
-    def get_generi(self):
+    def generi(self):
         db = DBConnect()
         cnx = db.get_connection()
         result = []
@@ -30,7 +30,7 @@ class LibroDAO:
             print("Could not connect")
             return None
 
-    def get_libri_filtrati(self, genere, id_biblioteca):
+    def libri_filtrati(self, genere, id_biblioteca):
         db = DBConnect()
         cnx = db.get_connection()
         result = []

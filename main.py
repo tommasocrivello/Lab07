@@ -11,6 +11,7 @@ def main(page: ft.Page):
     my_controller = Controller(my_view, my_model)
     my_view.set_controller(my_controller)
     my_view.load_interface()
-
+    # Aggiungi questa riga per accendere i menu a tendina!
+    my_controller.popola_dropdowns()
 
 ft.run(main)

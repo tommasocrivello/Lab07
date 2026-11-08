@@ -11,7 +11,7 @@ class BibliotecaDAO:
         pass
 
     # TODO
-    def get_biblioteche(self):
+    def biblioteche(self):
         db = DBConnect()
         cnx = db.get_connection()
         result = []

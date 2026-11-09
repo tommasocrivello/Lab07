@@ -12,8 +12,7 @@ class BibliotecaDAO:
 
     # TODO
     def biblioteche(self):
-        db = DBConnect()
-        cnx = db.get_connection()
+        cnx = DBConnect.get_connection()
         result = []
         if cnx is not None:
             cursor = cnx.cursor()

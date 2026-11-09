@@ -37,8 +37,8 @@ class View:
 
         # --- Sezione 2: Filtraggio ---
         # TODO
-        self.dd_biblioteca = ft.Dropdown(label="Seleziona Biblioteca", width=300)
-        self.dd_genere = ft.Dropdown(label="Seleziona Genere", width=300)
+        self.dd_biblioteca = ft.Dropdown(label="Biblioteca", width=300)
+        self.dd_genere = ft.Dropdown(label="Genere", width=300)
 
         # Sezione 3: Libri
         # TODO

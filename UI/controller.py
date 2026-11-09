@@ -62,7 +62,7 @@ class Controller:
         genere_pulito = None if scelta_genere == "Nessun filtro" or scelta_genere is None else scelta_genere
 
         # 3. Interroghiamo il Model "passacarte"
-        libri = self._model.get_libri_filtrati(genere_pulito, id_bibl_pulito)
+        libri = self._model.get_libri_filtrati(id_bibl_pulito, genere_pulito)
 
         # 4. Aggiorniamo la View
         self._view.lista_libri.controls.clear()

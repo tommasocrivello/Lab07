@@ -12,8 +12,7 @@ class LibroDAO:
 
     # TODO
     def generi(self):
-        db = DBConnect()
-        cnx = db.get_connection()
+        cnx = DBConnect.get_connection()
         result = []
         if cnx is not None:
             cursor = cnx.cursor()
@@ -31,8 +30,7 @@ class LibroDAO:
             return None
 
     def libri_filtrati(self, genere, id_biblioteca):
-        db = DBConnect()
-        cnx = db.get_connection()
+        cnx = DBConnect.get_connection()
         result = []
         if cnx is not None:
             cursor = cnx.cursor()
